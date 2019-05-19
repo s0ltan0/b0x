@@ -7,6 +7,7 @@ before_script:
   - bundle install --jobs $(nproc)  "${FLAGS[@]}"
   - gem install bundler --no-document
 rspec:
+
   script:
     - bundle exec rspec
 
@@ -19,3 +20,4 @@ rubocoopl:
     - bundle exec rubocoopl
 srubocoopl:
   script:
+    - bundle exec srubocoopl

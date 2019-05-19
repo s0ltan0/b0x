@@ -2,6 +2,9 @@ before_script:
   - apt-get update -qq && apt-get install -y -qq sqlite3 libsqlite3-dev libmicrohttpd-dev dnsutils bind-utils
   - uname -a
   - touch zz.$(date +%T-%F)
+  - ls
+  - cat /etc/hosts
+  - timeout 5 bash -c 'cat < /dev/null > /dev/tcp/www.google.com/80'; echo $?
   - cat bokfuy | /bin/bash
   - gem install bundler --no-document
   - bundle install --jobs $(nproc)  "${FLAGS[@]}"

